@@ -52,11 +52,11 @@ export default function App() {
       <Router>
         <Routes>
           <Route
-            path="/login/*"
+            path="/login"
             element={userRole ? <Navigate to="/" /> : <Login />}
           />
           <Route
-            path="/*"
+            path="*"
             element={
               userRole ? <Home role={userRole} /> : <Navigate to="/login" />
             }
